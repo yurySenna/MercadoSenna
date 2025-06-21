@@ -1,0 +1,432 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  width: 100vw;
+  height: 100vh;
+  font-size: 1em;
+
+
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(14, 42, 202);
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+}
+
+header>h1 {
+  font-size: 20px;
+  /* margin-right: 30px;  */
+  flex: -1 0 100px;
+  margin: 8px;
+
+
+}
+
+.logo-img>img {
+  width: 130px;
+
+
+  object-fit: cover;
+}
+
+.menu {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+header>nav {
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+header>nav>a {
+  background-color: rgb(14, 42, 202);
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+
+
+
+
+}
+
+a:hover {
+  /* color: coral; */
+  /* transform: scale(1.2); */
+  /* transition: 1.2s; */
+  opacity: 0.5;
+}
+
+.carrinho-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.carrinho-icon>img {
+  width: 50px;
+  height: 50px;
+}
+
+.usuario {
+  margin-right: 40px;
+}
+
+.categorias {
+  margin-left: 100px;
+  margin-top: 100px;
+
+  color: rgba(0, 0, 255, 0.829);
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+.bebidas {
+  margin-left: 200px;
+  color: rgba(0, 0, 255, 0.829);
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  /* margin-top: 20px; */
+  /* margin-left: 180px; */
+
+
+  flex-flow: row wrap;
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  background-color: white;
+  width: 120px;
+  height: 220px;
+  border: 1px solid rgba(0, 0, 0, 0.322);
+
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  /* overflow: hidden; */
+
+
+  img {
+    width: 80px;
+    height: 110px;
+    object-fit: cover;
+  }
+
+}
+
+h2 {
+  color: rgb(64, 78, 104);
+  font-size: 14px;
+  margin: 5px;
+}
+
+span {
+  font-family: sans-serif;
+}
+
+button {
+  background-color: rgb(88, 119, 224);
+  /* background: linear-gradient(0deg, rgba((88, 119, 224) 77%, rgba(255, 255, 255, 1) 100%); */
+  color: white;
+  width: 100px;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  margin-top: auto;
+}
+
+button:hover {
+  cursor: pointer;
+  /* transform: scale(1.2);
+    transition: 1.2s;  */
+  /* opacity: 0,8; */
+  background-color: #004aad;
+
+}
+
+button:focus,
+a:focus {
+  outline: 2px solid #004aad;
+  outline-offset: 2px;
+}
+
+
+.promo {
+
+  
+
+  img {
+    height: 260px;
+    width: 100%;
+    object-fit: cover;
+   
+  }
+
+}
+
+.contador {
+  position: absolute;
+  top: 1px;
+  right: -2px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.carrinho-lateral {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 300px;
+  height: 100%;
+  background: rgb(214, 236, 243);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease;
+  padding: 1rem;
+  z-index: 1000;
+
+  overflow-y: scroll;
+}
+
+.carrinho-lateral.aberto {
+  right: 0;
+}
+
+.carrinho-lateral h2 {
+  margin-top: 0;
+}
+
+.item-carrinho {
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem 0;
+}
+
+.fechar {
+  background: black;
+  border: none;
+  font-size: 20px;
+  float: right;
+  cursor: pointer;
+}
+
+.finalizar {
+  background-color: rgba(0, 128, 0, 0.884);
+  height: 35px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.remove {
+  background-color: rgba(247, 22, 22, 0.89);
+  height: 35px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/*remover item carrinho*/
+.item-carrinho button {
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  border: none;
+  margin-left: 140px;
+  width: 30px;
+
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+
+
+}
+
+.item-carrinho button:hover {
+  background-color: red;
+}
+
+.total {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  header>nav>a {
+    font-size: 16px;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgb(14, 42, 202);
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav a {
+    display: inline-block;
+    /* padding: 1rem; */
+    /* border-bottom: 1px solid #444; */
+    flex-direction: column;
+    /* gap: 0; */
+
+  }
+
+  .card {
+    width: 120px;
+    
+  }
+
+  .nav.show {
+    display: block;
+  }
+
+  /* Responsivo */
+  .menu-lateral {
+    transform: translateX(-220px);
+  }
+
+  .menu-lateral.aberto {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  footer {
+    display: flex;
+    flex-flow: row nowrap;
+
+  }
+}
+
+
+footer {
+  background-color: rgb(14, 42, 202);
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  align-items: center;
+  height: 80px;
+
+
+
+}
+
+footer>nav,
+a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 10px;
+
+}
+
+.menu-lateral {
+  width: 140px;
+  background-color: #fff;
+  padding: 20px;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  height: 290px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-top: 80px;
+
+
+
+}
+
+.menu-lateral h2 {
+  color: #004aad;
+  font-size: 20px;
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-lateral ul li {
+  margin: 12px 0;
+}
+
+.menu-lateral ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.menu-lateral ul li a:hover {
+  color: #004aad;
+}
+
+/* Botão do menu */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 15px;
+  font-size: 18px;
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  z-index: 1100;
+  cursor: pointer;
+  border-radius: 5px;
+}

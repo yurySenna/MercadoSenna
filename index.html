@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado</title>
+    <link rel="stylesheet" href="mercado.css">
+</head>
+
+<body>
+    <header>
+        <!-- Menu responsivo quando acessar em telas pequenas ele aparece usando JavaScript -->
+        <div class="menu" id="menu" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <div class="logo-img">
+            <img src="img/logo-carrinho1.png" alt="">
+        </div>
+
+
+        <nav class="nav" id="nav">
+            <a href="">Home</a>
+            <a href="">Mercadoria</a>
+            <a href="">Quem Somos</a>
+            <a href="">Endereço</a>
+        </nav>
+
+        <div class="carrinho-icon" onclick="abrirCarrinho()">
+            <img src="img/carrinho.png" alt="carrinho">
+
+            <div class="contador" id="contador-carrinho">0</div>
+        </div>
+        <div class="usuario">
+            <img src="img/usuario.png" alt="">
+            <a href="">Entre ou <br>
+                Cadastre-se</a>
+        </div>
+
+    </header>
+
+    <section>
+        <!-- <div class="promo">
+            <img src="img/foto-ofertas.jpeg" alt="">
+        </div> -->
+
+    </section>
+
+    <div class="categorias">
+        <h1 id="mercearia">Mercearia</h1>
+    </div> 
+
+    <div>
+        <aside class="menu-lateral" id="menuLateral">
+            <h2>Categorias</h2>
+            <ul>
+                <li><a href="#mercearia">🛒 Mercearia</a></li>
+                <li><a href="#hortifruti">🍎 Hortifrúti</a></li>
+                <li><a href="#acougue">🥩 Açougue</a></li>
+                <li><a href="#padaria">🍞 Padaria</a></li>
+                <li><a href="#bebidas">🥤 Bebidas</a></li>
+                <li><a href="#limpeza">🧼 Limpeza</a></li>
+                 <li><a href="#perfumaria">🔥 Perfumaria</a></li>
+                <li><a href="#ofertas">🔥 Ofertas</a></li>
+            </ul>
+        </aside>
+    </div>
+
+
+    <section class="container">
+    
+        <div class="card">
+            <img src="img/arroztio.webp" alt="arroz">
+            <h2>Arroz Tio João 1kg</h2>
+            <span><strong>R$ 5.99</strong></span>
+            <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Comprar</button> 
+
+        </div>
+
+        <div class="card">
+            <img src="img/arroz-camil.png" alt="arroz">
+            <h2>Arroz Camil tipo 1 5kg</h2>
+            <span><strong>R$ 29.99</strong></span>
+            <button onclick="adicionarAoCarrinho('Arroz camil 5kg', 29.99)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/arrox-brot.webp" alt="arroz">
+            <h2>Arroz Broto Legal 5kg</h2>
+            <span><strong>R$ 32.99</strong></span>
+            <button onclick="adicionarAoCarrinho('Arroz Broto legal 5kg', 32.99)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/namorado.png" alt="arroz">
+            <h2>Arroz Namorado 1kg</h2>
+            <span><strong>R$ 5.99</strong></span>
+            <button onclick="adicionarAoCarrinho('Arroz namorado 1kg', 5.99)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/arroz-prat.webp" alt="arroz">
+            <h2>Arroz Prato Fino 5kg</h2>
+            <span><strong>R$ 34.00</strong></span>
+            <button onclick="adicionarAoCarrinho('Arroz Prato Fino 5kg', 34.00)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/caçarola.jpg" alt="arroz">
+            <h2>Arroz Caçarola 5kg</h2>
+            <span><strong>R$ 34.00</strong></span>
+            <button onclick="adicionarAoCarrinho('Arroz Caçarola 5kg', 34.00)">Comprar</button>
+        </div>
+    </section>
+
+    <!-- Seçao feijão -->
+    <section class="container">
+        <div class="card">
+            <img src="img/feijao preto.webp" alt="feijao">
+            <h2>Feijão Preto 1kg</h2>
+            <span><strong>R$ 6.99</strong></span>
+            <button onclick="adicionarAoCarrinho('Feijão Preto 1kg', 6.99)">Comprar</button> 
+        </div>
+
+        <div class="card">
+            <img src="img/dular.jpg" alt="feijao">
+            <h2>Feijão Dular 1kg</h2>
+            <span><strong>R$ 4.99</strong></span>
+            <button onclick="adicionarAoCarrinho('Feijão Dular 1kg', 4.99)">Comprar</button>
+
+        </div>
+
+        <div class="card">
+            <img src="img/fnamorado.jpg" alt="feijao">
+            <h2>Feijão Namorado 1kg</h2>
+            <span><strong>R$ 5.99</strong></span>
+            <button onclick="adicionarAoCarrinho('Feijão Namorado 1kg', 5.99)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/fejao-car.webp" alt="feijao">
+            <h2>Feijão Carioca tipo1 1kg</h2>
+            <span><strong>R$ 4.99</strong></span>
+            <button onclick="adicionarAoCarrinho('Feijao Carioca 1kg', 4.99)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/maximo.webp" alt="feijao">
+            <h2>Feijão Maximo 1kg</h2>
+            <span><strong>R$ 6.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Feijao Maximo 1kg', 6.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/kikaldo.webp" alt="feijao">
+            <h2>Feijão Kikaldo 1kg</h2>
+            <span><strong>R$ 9.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Feijao Kikaldo 1kg', 9.90)">Comprar</button>
+        </div>
+
+    </section>
+
+    <!-- Seção açucar -->
+    <section class="container">
+        <div class="card">
+            <img src="img/uniao.webp" alt="acucar">
+            <h2>Açucar Uniao 1kg</h2>
+            <span><strong>R$ 5.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Açucar União 1kg', 5.99)">Comprar</button> 
+        </div>
+
+        <div class="card">
+            <img src="img/dabarra.webp" alt="acucar">
+            <h2>Açucar Da Barra 1kg</h2>
+            <span><strong>R$ 5.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Açucar da Barra 1kg', 5.90)">Comprar</button>
+        </div>
+
+
+        <div class="card">
+            <img src="img/auto.webp" alt="acucar">
+            <h2>Açucar Alto Alegre 1kg</h2>
+            <span><strong>R$ 4.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Açucar Alto Alegre 1kg', 4.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/caravelas.webp" alt="acucar">
+            <h2>Açucar Caravelas 1kg</h2>
+            <span><strong>R$ 5.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Açucar Caravelas 1kg', 5.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/açucar.webp" alt="acucar">
+            <h2>Açucar Refinado Especial 1kg</h2>
+            <span><strong>R$ 6.59</strong></span>
+            <button onclick="adicionarAoCarrinho('Açucar Refinado 1kg', 6.59)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/cristal.png" alt="acucar">
+            <h2>Açucar Cristal 1kg</h2>
+            <span><strong>R$ 3.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Açucar Cristal 1kg', 3.90)">Comprar</button>
+        </div>
+
+
+    </section>
+
+    <!-- Secão Café -->
+    <section class="container">
+        <div class="card">
+            <img src="img/cafe-cabo.webp" alt="cafe">
+            <h2>Café Caboclo Tradicional 500g</h2>
+            <span><strong>R$ 28.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Café Cabloco 500g', 28.90)">Comprar</button> 
+        </div>
+
+        <div class="card">
+            <img src="img/tres.jpg" alt="cafe">
+            <h2>Café 3 Corações 500g</h2>
+            <span><strong>R$ 28.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Café 3 Corações 500g', 28.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/cafe-faz.webp" alt="cafe">
+            <h2>Café Sabor da Fazenda 500g</h2>
+            <span><strong>R$ 30.49</strong></span>
+            <button onclick="adicionarAoCarrinho('Café Sabor da Fazenda 500g',30.49)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/evoluto.jpg" alt="cafe">
+            <h2>Café Evolutto 500g</h2>
+            <span><strong>R$ 28.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Café Evolutto 500g', 28.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/meli.jpg" alt="cafe">
+            <h2>Café Melita Tradicional 500g</h2>
+            <span><strong>R$ 32.34</strong></span>
+            <button onclick="adicionarAoCarrinho('Café Melita 500g', 32.34)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/cafe-pil.webp" alt="">
+            <h2>Café Pilão Tradicional 500g</h2>
+            <span><strong>R$ 32.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Café Pilão 500g',32.90)">Comprar</button>
+        </div>
+    </section>
+    <!-- seçao leite -->
+    <section class="container">
+        <div class="card">
+            <img src="img/jusara.webp" alt="leite">
+            <h2>Leite Jussara 1l</h2>
+            <span><strong>R$ 5.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Leite Jussara 1l',5.90)">Comprar</button>
+        </div> 
+
+        <div class="card">
+            <img src="img/italac-zero.jpg" alt="leite">
+            <h2>Leite Italac Zero 1l</h2>
+            <span><strong>R$ 6.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Leite Italac Zero 1l',6.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/leit-nin.webp" alt="leite">
+            <h2>Leite Ninho em Pó 380g</h2>
+            <span><strong>R$ 15.00</strong></span>
+            <button onclick="adicionarAoCarrinho('Leite em Pó 380g',15.00)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/lider.jpeg" alt="leite">
+            <h2>Leite Lider 1l</h2>
+            <span><strong>R$ 5.40</strong></span>
+            <button onclick="adicionarAoCarrinho('Leite Lider 1l',5.40)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/ninho.jpg" alt="leite">
+            <h2>Leite Ninho 1l</h2>
+            <span><strong>R$ 8.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Leite Ninho 1l',8.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/piracan.webp" alt="leite">
+            <h2>Leite Piracanjuba 1l</h2>
+            <span><strong>R$ 5.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Leite Piracanjuba 1l',5.90)">Comprar</button>
+        </div>
+    </section>
+
+    <div class="bebidas">
+        <h1 id="bebidas">Bebidas</h1>
+    </div> 
+
+     <section>
+        <div class="promo">
+            <img src="img/cervejas/cerveja-propaga.png" alt="">
+        </div>
+
+    </section>
+
+     <section class="container">
+        <div class="card">
+            <img src="img/cervejas/amstel230.webp" alt="cerveja">
+            <h2>Cerveja Amstel 350ml</h2>
+            <span><strong>R$ 4.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Cerveja Amstel 350ml',4.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/cervejas/bohemia.jpg" alt="cerveja">
+            <h2>Cerveja Bohemia 350ml</h2>
+            <span><strong>R$ 5.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Cerveja Bohemia 350ml',5.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/cervejas/bud-lata.jpg" alt="cerveja">
+            <h2>Cerveja Budweiser 269ml</h2>
+            <span><strong>R$ 3.00</strong></span>
+            <button onclick="adicionarAoCarrinho('Cerveja Budweiser 269ml',3.00)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/cervejas/bud-long.jpg" alt="cerveja">
+            <h2>Cerveja Budweiser 330ml</h2>
+            <span><strong>R$ 5.40</strong></span>
+            <button onclick="adicionarAoCarrinho('Cerveja Budweiser 330ml',5.40)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/cervejas/coca-lata.jpg" alt="coca cola">
+            <h2>Coca Cola lata 350ml</h2>
+            <span><strong>R$ 3.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Coca Cola lata 350ml',3.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/cervejas/coca1l.jpg" alt="coca cola">
+            <h2>Coca Cola 1l</h2>
+            <span><strong>R$ 6.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Coca Cola 1l',6.90)">Comprar</button>
+        </div>
+    </section>
+
+     <div class="bebidas">
+        <h1 id="padaria">Padaria</h1>
+    </div>
+
+     <section>
+        <div class="promo">
+            <img src="img/paes/ofertas.png" alt="">
+        </div>
+
+    </section>
+    
+     <section class="container">
+        <div class="card">
+            <img src="img/paes/pao-frances.jpg" alt="pão-frances">
+            <h2>Pão Francês 1Kg</h2>
+            <span><strong>R$ 49.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Pão Francês 1kg',49.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/paes/pao-queijo.jpg" alt="pao de queijo">
+            <h2>Pão de Queijo 100g</h2>
+            <span><strong>R$ 7.00</strong></span>
+            <button onclick="adicionarAoCarrinho('Pão de Queijo 100g',7.00)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/paes/baguete.png" alt="pão baguete">
+            <h2>Pão Baguete 100g</h2>
+            <span><strong>R$ 5.40</strong></span>
+            <button onclick="adicionarAoCarrinho('Pão Baguete 100g',5.40)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/paes/pao-pulman.jpg" alt="pao pulman">
+            <h2>Pão Integral Pullman 350g</h2>
+            <span><strong>R$ 11.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Pão Integral pulman',11.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/paes/presunto.png" alt="presunto">
+            <h2>Presunto Fatiado 100g</h2>
+            <span><strong>R$ 4.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Presunto Fatiado 100g',4.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/paes/mussarella.png" alt="cerveja">
+            <h2>Mussarela Fatiada 100g</h2>
+            <span><strong>R$ 4.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Cerveja Amstel 350ml',4.90)">Comprar</button>
+        </div>
+    </section>
+
+    <div class="bebidas">
+        <h1 id="perfumaria">Perfumaria</h1>
+    </div>
+
+     <section>
+        <div class="promo">
+            <img src="img/perfumaria/promo-perfu.jpg" alt="">
+        </div>
+
+    </section>
+    
+     <section class="container">
+        <div class="card">
+            <img src="img/perfumaria/dese-dove.png" alt="pão-frances">
+            <h2>Pão Francês 1Kg</h2>
+            <span><strong>R$ 49.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Pão Francês 1kg',49.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/perfumaria/desedo-suave.png" alt="pao de queijo">
+            <h2>Pão de Queijo 100g</h2>
+            <span><strong>R$ 7.00</strong></span>
+            <button onclick="adicionarAoCarrinho('Pão de Queijo 100g',7.00)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/perfumaria/deso-rex.jpg" alt="pão baguete">
+            <h2>Pão Baguete 100g</h2>
+            <span><strong>R$ 5.40</strong></span>
+            <button onclick="adicionarAoCarrinho('Pão Baguete 100g',5.40)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/perfumaria/saba-gran.png" alt="pao pulman">
+            <h2>Pão Integral Pullman 350g</h2>
+            <span><strong>R$ 11.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Pão Integral pulman',11.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/perfumaria/sabao-gran.png" alt="presunto">
+            <h2>Presunto Fatiado 100g</h2>
+            <span><strong>R$ 4.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Presunto Fatiado 100g',4.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/perfumaria/leite-rosa.png" alt="cerveja">
+            <h2>Mussarela Fatiada 100g</h2>
+            <span><strong>R$ 4.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Cerveja Amstel 350ml',4.90)">Comprar</button>
+        </div>
+    </section>
+
+    <div class="bebidas">
+        <h1 id="limpeza">Limpeza</h1>
+    </div>
+
+     <section>
+        <div class="promo">
+            <img src="img/limpeza/promo-limpe.png" alt="">
+        </div>
+
+    </section>
+    
+     <section class="container">
+        <div class="card">
+            <img src="img/limpeza/amaciante.png" alt="pão-frances">
+            <h2>Amaciante Comfort 1l</h2>
+            <span><strong>R$ 11.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Amaciante Comfort 1l',11.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/limpeza/ariel.png" alt="sabao ariel">
+            <h2>Sabão Liquido Ariel 3l</h2>
+            <span><strong>R$ 25.00</strong></span>
+            <button onclick="adicionarAoCarrinho('Sabão Liquido Ariel 3l',25.00)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/limpeza/tixan.webp" alt="sabao tixan">
+            <h2>Sabão em Pó Tixan 1.6kg</h2>
+            <span><strong>R$ 14.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Sabão em pó Tixan',14.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/limpeza/alcool.png" alt="álcool em gel">
+            <h2>Álcool em gel 70% 440g</h2>
+            <span><strong>R$ 10.90</strong></span>
+            <button onclick="adicionarAoCarrinho('Álcool em gel 70%',10.90)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/limpeza/sabao-po.jpg" alt="sabao em po">
+            <h2>Sabão em Pó OMO 1kg</h2>
+            <span><strong>R$ 12.30</strong></span>
+            <button onclick="adicionarAoCarrinho('Sabão em Pó OMO 1kg',12.30)">Comprar</button>
+        </div>
+
+        <div class="card">
+            <img src="img/limpeza/omo.png" alt="lava roupas">
+            <h2>Lava Roupas OMO 1,05l</h2>
+            <span><strong>R$ 13.50</strong></span>
+            <button onclick="adicionarAoCarrinho('Lava Roupas OMO 1,05l',13.50)">Comprar</button>
+        </div>
+    </section>
+
+    <!-- Carrinho Lateral -->
+    <div class="carrinho-lateral" id="carrinho">
+        <button class="fechar" onclick="fecharCarrinho()">×</button>
+        <h2>Meu Carrinho</h2>
+
+        <div id="itens-carrinho"></div>
+
+        <div class="total" id="total">Total:</div>
+
+        <div class="botoes">
+
+            <button class="finalizar" onclick="finalizar()">Finalizar Compra</button>
+
+            <button class="remove" id="limpar" onclick="limparCarrinho()">Limpar Carrinho</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <a href="">
+            <p>Direitos Reservado - Senna Dev</p>
+        </a>
+        <nav>
+            <a href="#inicio">Pagina Inicial</a>
+            <a href="">Parceiros</a>
+            <a href="">Compre e ganhe</a>
+            <a href="">Sorteios</a>
+            <a href="">Clientes</a>
+
+        </nav>
+    </footer>
+    <script src="mercado.js"></script>
+</body>
+
+</html>
