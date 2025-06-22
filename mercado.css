@@ -11,6 +11,7 @@ body {
   font-size: 1em;
 
   background-color: #f1f1f1;
+  overflow-x: hidden;
 
 
 }
@@ -147,7 +148,7 @@ a:hover {
 
   flex-flow: row wrap;
   background-color: #f1f1f1;
-  margin-left: 20px;
+  
 }
 
 
@@ -320,7 +321,7 @@ a:focus {
   margin-top: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   header>nav>a {
     font-size: 16px;
   }
@@ -360,10 +361,16 @@ a:focus {
   /* Responsivo */
   .menu-lateral {
     transform: translateX(-220px);
+    
   }
 
   .menu-lateral.aberto {
     transform: translateX(0);
+    width: 80px;
+
+    h2 {
+      font-size: 17px;
+    }
   }
 
   .menu-toggle {
