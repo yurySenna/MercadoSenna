@@ -110,9 +110,6 @@ a:hover {
   display: flex;
   
 
-  
-
-
 }
 
 .bebidas {
@@ -150,6 +147,7 @@ a:hover {
 
   flex-flow: row wrap;
   background-color: #f1f1f1;
+  margin-left: 20px;
 }
 
 
@@ -322,7 +320,7 @@ a:focus {
   margin-top: 20px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   header>nav>a {
     font-size: 16px;
   }
