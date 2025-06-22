@@ -10,6 +10,8 @@ body {
   height: 100vh;
   font-size: 1em;
 
+  background-color: #f1f1f1;
+
 
 }
 
@@ -94,21 +96,44 @@ a:hover {
 }
 
 .categorias {
-  margin-left: 100px;
+  margin-left: 130px;
   margin-top: 100px;
 
-  color: rgba(0, 0, 255, 0.829);
+  color: rgba(0, 0, 255, 0.568);
   font-size: 20px;
   font-weight: bold;
+
+  /*teste apagar depois se nao der certo*/
+  width: 100vw;
+  height: 100px;
+  background-color: #f1f1f1;
+  display: flex;
+  
+
+  
+
 
 }
 
 .bebidas {
-  margin-left: 200px;
-  color: rgba(0, 0, 255, 0.829);
+  /* margin-left: 200px; */
+  color: rgba(0, 0, 255, 0.562);
   font-size: 20px;
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
+
+  /*teste apagar depois se nao der certo*/
+  width: 100vw;
+  height: 100px;
+  /* background-color: #c7c5c5; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+
+   
+  
+
 
 }
 
@@ -124,6 +149,7 @@ a:hover {
 
 
   flex-flow: row wrap;
+  background-color: #f1f1f1;
 }
 
 
@@ -136,7 +162,7 @@ a:hover {
   background-color: white;
   width: 120px;
   height: 220px;
-  border: 1px solid rgba(0, 0, 0, 0.322);
+  border: 1px solid rgba(0, 0, 0, 0.144);
 
   padding: 15px;
   border-radius: 10px;
@@ -191,12 +217,11 @@ a:focus {
 
 
 .promo {
-
   
-
+  
   img {
     height: 260px;
-    width: 100%;
+    width: 90%;
     object-fit: cover;
    
   }
@@ -297,7 +322,7 @@ a:focus {
   margin-top: 20px;
 }
 
-@media (max-width: 393px) {
+@media (max-width: 600px) {
   header>nav>a {
     font-size: 16px;
   }
